@@ -1,0 +1,13 @@
+/* GENERAL */
+/* Removing the default browers parameters */
+
+* {
+  margin: 0;
+  padding: 0;
+  /* text-decoration removes the underlines for links */
+  text-decoration: none;
+  /* list-style removes cheaps (puces) from lists */
+  list-style: none;
+}
+
+@import url("/components/navbar.css");
