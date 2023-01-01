@@ -1,4 +1,8 @@
-/* GENERAL */
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap');
+h1, h2, h3, p, a {
+  font-family: 'Inter', sans-serif;
+}
 
 /* Removing some default browers parameters */
 * {
@@ -9,14 +13,12 @@
 }
 
 /* CONTAINER */
-
 .container {
   width: 1300px;
   margin: 40px auto;
 }
 
 /* NAVBAR */
-
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -25,7 +27,7 @@
 }
 
 .nav-links ul {
-  /* allows to have all the nav links inline (meaning on the same line) */
+  /* allows to have all the nav links inline = on the same line) */
   display: inline-flex;
 }
 
@@ -40,6 +42,83 @@
 
 
 /* BANNER IMG */
-.main-card img {
-  width: 75%;
+.banner-img img {
+  width: 100%;
+}
+
+/* GRIDS */
+.main-card-grid1 {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  grid-gap: 2rem;
+}
+
+.main-card-grid2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 3rem;
+}
+
+/*STYLING CARDGRIDS & SIDECARD */
+.main-card-grid1 .side-card {
+  background-color: black;
+  color: white;
+}
+
+.main-card-title h1 {
+  font-size: 4rem;
+  font-weight: 800;
+  margin-top: 25px;
+  margin-left: 0px;
+  margin-bottom: 0px;
+  padding-left: 0px;
+}
+
+.main-card-content {
+  padding-left: 20px;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.main-card-content p {
+  color: gray;
+  padding-top: 20px;
+  line-height: 1.5;
+  letter-spacing: 1.2px;
+}
+
+.main-card-content a {
+  background-color: #ef4232;
+  color: white;
+  font-weight: 700;
+  padding: 15px 25px;
+  letter-spacing: 4px;
+}
+
+.main-card-content a:hover {
+  background-color: black;
+  color: white;
+  font-weight: 700;
+  padding: 15px 25px;
+  letter-spacing: 4px;
+}
+
+.side-card P {
+  line-height: 2;
+  color: lightgray;
+  font-weight: 400;
+  padding: 0px 25px;
+}
+
+.side-card h2 {
+  font-size: 48px;
+  letter-spacing: 1.5px;
+  color: #f9a93a;
+  padding-left: 25px;
+}
+
+.side-card h3 {
+  padding: 0px 25px;
 }
