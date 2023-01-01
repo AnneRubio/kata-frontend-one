@@ -59,6 +59,12 @@ h1, h2, h3, p, a {
   grid-gap: 3rem;
 }
 
+.list-card-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 2rem;
+}
+
 /*STYLING CARDGRIDS & SIDECARD */
 .main-card-grid1 .side-card {
   background-color: black;
@@ -109,7 +115,8 @@ h1, h2, h3, p, a {
   line-height: 2;
   color: lightgray;
   font-weight: 400;
-  padding: 0px 25px;
+  margin-top: 10px;
+  margin-bottom: 20px;
 }
 
 .side-card h2 {
@@ -117,8 +124,35 @@ h1, h2, h3, p, a {
   letter-spacing: 1.5px;
   color: #f9a93a;
   padding-left: 25px;
+  margin-bottom: 25px;
 }
 
 .side-card h3 {
-  padding: 0px 25px;
+  margin-bottom: 0px;
+  margin-top: 25px;
 }
+
+
+.side-card .bordered-content {
+  border-top: dotted 1px lightgray;
+  border-bottom: dotted 1px lightgray;
+  margin: 0px 25px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.non-bordered-content {
+  margin: 0px 25px;
+}
+
+.list-cards {
+  display: flex;
+  align-items: center;
+  justify-items: flex-start;
+}
+
+.list-cards img {
+  height: 55%;
+  margin-right: 20px;
+}
+
