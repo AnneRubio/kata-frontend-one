@@ -27,7 +27,7 @@ h1, h2, h3, p, a {
 }
 
 .nav-links ul {
-  /* allows to have all the nav links inline = on the same line) */
+  /* have all the nav links on the same line) */
   display: inline-flex;
 }
 
@@ -38,6 +38,27 @@ h1, h2, h3, p, a {
 
 .nav-links ul a:hover {
   color: #f9a93a;
+}
+
+.navbar .nav-links ul li.active a {
+  color: #f9a93a;
+  font-weight: 600;
+}
+
+/* WORK IN PROGRESS: Turning the navbar responsive */
+.navbar .menu-hamburger {
+  display: none;
+  width: 50px;
+}
+
+@media screen and (max-width: 500px) {
+  .navbar .menu-hamburger {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+  }
 }
 
 
