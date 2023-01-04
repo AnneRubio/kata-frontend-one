@@ -10,6 +10,12 @@ h1, h2, h3, p, a {
   text-decoration: none;
   /* list-style removes cheaps (puces) from lists */
   list-style: none;
+  box-sizing: border-box;
+}
+
+.body {
+  height: 100vh;
+  font-family:'Inter', sans-serif;
 }
 
 /* CONTAINER */
@@ -26,41 +32,44 @@ h1, h2, h3, p, a {
   margin-bottom: 30px;
 }
 
-.nav-links ul {
+.nav-links ul li {
   /* have all the nav links on the same line) */
-  display: inline-flex;
+  display: inline-block;
+  /* I could have done the same on the nav-links ul selector only with display: inline-flex property */
 }
 
-.nav-links ul a {
+.nav-links ul li a {
   color: grey;
   padding-left: 2rem;
+  transition: all .5s ease;
 }
 
-.nav-links ul a:hover {
-  color: #f9a93a;
-}
-
-.navbar .nav-links ul li.active a {
+ul li a:hover,
+.nav-links li.active a {
   color: #f9a93a;
   font-weight: 600;
 }
 
 /* WORK IN PROGRESS: Turning the navbar responsive */
-.navbar .menu-hamburger {
+#icon {
+  /* changes the cursor as pointer with hand on mouse over */
+  cursor: pointer;
+}
+
+#icon svg {
+  color: black;
+  height: 18px;
+}
+
+#checkbox,#icon {
   display: none;
-  width: 50px;
 }
 
-@media screen and (max-width: 500px) {
-  .navbar .menu-hamburger {
-    display: block;
+/* @media screen and (max-width: 768px) {
+  ul {
+    position:absolute;
   }
-
-  .nav-links {
-    display: none;
-  }
-}
-
+} */
 
 /* BANNER IMG */
 .main-card img {
