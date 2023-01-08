@@ -3,9 +3,9 @@
 
 /* REMOVING SOME DEFAULT BROWSER PARAMETERS */
 * {
-  /* text-decoration removes the underlines for links */
+  /* remove underlines for links */
   text-decoration: none;
-  /* list-style removes cheaps (puces) from lists */
+  /* remove cheaps (puces) from lists */
   list-style: none;
   box-sizing: border-box;
 }
@@ -67,7 +67,7 @@ ul li.active a {
   display: none;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 600px) {
   ul {
     position: absolute;
     width: 100%;
@@ -100,7 +100,6 @@ ul li.active a {
 /* GRIDS */
 .grid-container {
   display: grid;
-  /* height: 100vh; */
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(3, minmax(1fr, auto));
   grid-gap: 1rem;
@@ -133,13 +132,15 @@ ul li.active a {
 }
 
 /* Making the grid responsive for mobile */
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 600px) {
+  .container {
+    width: 100%;
+    margin: auto;
+  }
   .main-card-banner img {
-    background-image: url("./images/image-web-3-mobile.jpg");
-    height: 100%;
     display: block;
-    /* box-sizing: border-box; */
-    max-width: 100%;
+    width: 100%;
+    height: 100%;
   }
   .grid-container {
     grid-template-columns: 1fr;
