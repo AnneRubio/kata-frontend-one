@@ -35,9 +35,23 @@
         <li><a href="#">Categories</a></li>
       </ul>
     </nav>
+    <!-- <svg width="32" height="31" xmlns="http://www.w3.org/2000/svg"><g fill="#00001A" fill-rule="evenodd"><path d="m2.919.297 28.284 28.284-2.122 2.122L.797 2.419z"/><path d="M.797 28.581 29.081.297l2.122 2.122L2.919 30.703z"/></g></svg> -->
     <div class="grid-container">
       <div class="main-card-banner">
-        <img src="./assets/images/image-web-3-desktop.jpg" alt="photo representing web 3.0">
+        <picture>
+          <source
+            srcset="./assets/images/image-web-3-mobile.jpg"
+            type="image/jpg"
+            media="all and (max-width: 760px)"
+          />
+          <source
+          srcset="./assets/images/image-web-3-desktop.jpg"
+          type="image/jpg"
+          media="all and (min-width: 761px) and (max-width: 1500px)"
+          />
+          <!-- the default img in case browser does not support the scrset -->
+          <img src="./assets/images/image-web-3-desktop.jpg" alt="picture with geographical forms">
+        </picture>
       </div>
         <div class="main-card-title">
         <h1>The Bright <br> Future of <br> Web 3.0?</h1>
