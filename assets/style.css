@@ -52,29 +52,33 @@ ul li.active a {
   transition: all .5s ease;
 }
 
-/* WORK IN PROGRESS: Turning the navbar responsive */
 #icon-menu-hamburger svg {
   color: black;
   height: 18px;
   cursor: pointer;
 }
+
+.close {
+  cursor: pointer;
+  margin-top: 0px;
+}
+
+
 /* hide the checkbox and the icon of the menu hamburger: */
 #checkbox,
 #icon-menu-hamburger {
   display: none;
 }
-
+/* WORK IN PROGRESS: Turning the navbar responsive */
 @media screen and (max-width: 760px) {
   ul {
     position: absolute;
-    width: 100%;
-    height: calc(100vh - 70px);
-    background-color: azure;
     left: 0;
     top: 0;
-    text-align: center;
+    width: 100%;
+    height: 100vh;
+    background-color: white;
     display: none;
-    margin-top: 70px;
     padding-top: 2rem;
     text-align: left;
     color: black;
@@ -288,4 +292,12 @@ ul li.active a {
   color: gray;
   font-weight: 500;
   font-size: 1.2rem;
+}
+
+.red {
+  color: #ef4232;
+}
+
+.orange {
+  color: #f9a93a;
 }

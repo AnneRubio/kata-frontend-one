@@ -9,7 +9,6 @@
   <link href="assets/style.css" rel="stylesheet">
   <title>Frontend Mentor | News homepage</title>
 
-
   <style>
     .attribution { font-size: 11px; text-align: center; }
     .attribution a { color: hsl(228, 45%, 44%); }
@@ -27,7 +26,8 @@
       <label for="checkbox" id="icon-menu-hamburger">
         <svg class="menu-hamburger" width="40" height="17" xmlns="http://www.w3.org/2000/svg"><g fill="#00001A" fill-rule="evenodd"><path d="M0 0h40v3H0zM0 7h40v3H0zM0 14h40v3H0z"/><path d="M0 0h40v3H0z"/></g></svg>
       </label>
-      <ul>
+      <ul class="close" id="open">
+        <svg width="32" height="31" xmlns="http://www.w3.org/2000/svg"><g fill="#00001A" fill-rule="evenodd"><path d="m2.919.297 28.284 28.284-2.122 2.122L.797 2.419z"/><path d="M.797 28.581 29.081.297l2.122 2.122L2.919 30.703z"/></g></svg>
         <li><a href="#">Home</a></li>
         <li><a href="#">New</a></li>
         <li><a href="#">Popular</a></li>
@@ -35,7 +35,6 @@
         <li><a href="#">Categories</a></li>
       </ul>
     </nav>
-    <!-- <svg width="32" height="31" xmlns="http://www.w3.org/2000/svg"><g fill="#00001A" fill-rule="evenodd"><path d="m2.919.297 28.284 28.284-2.122 2.122L.797 2.419z"/><path d="M.797 28.581 29.081.297l2.122 2.122L2.919 30.703z"/></g></svg> -->
     <div class="grid-container">
       <div class="main-card-banner">
         <picture>
@@ -64,15 +63,15 @@
       <div class="side-card">
         <h2>New</h2>
         <div class="non-bordered-content">
-          <h3>Hydrogen VS Electric Cars</h3>
+          <h3 class="oranged">Hydrogen VS Electric Cars</h3>
           <p>Will hydrogen-fueled cars ever catch up to EVs?</p>
         </div>
         <div class="bordered-content">
-          <h3>The Downsides of AI Artistry</h3>
+          <h3 class="oranged">The Downsides of AI Artistry</h3>
           <p>What are the possible adverse effects of on-demand AI image generation?</p>
         </div>
         <div class="non-bordered-content">
-          <h3>Is VC Funding Drying Up?</h3>
+          <h3 class="oranged">Is VC Funding Drying Up?</h3>
           <p>Private funding by VC firms is down 50% YOY. We take a look at what that means.</p>
         </div>
       </div>
@@ -80,7 +79,7 @@
         <img src="./assets/images/image-retro-pcs.jpg" alt="photo of a retro laptop">
         <div class="content-card">
           <h2>01</h2>
-          <h3>Reviving Retro PCs</h3>
+          <h3 class="colored">Reviving Retro PCs</h3>
           <p>What happens when old PCs are given modern upgrades?</p>
         </div>
       </div>
@@ -88,7 +87,7 @@
         <img src="./assets/images/image-top-laptops.jpg" alt="photo of a computer keybord">
         <div class="content-card">
           <h2>02</h2>
-          <h3>Top 10 Laptops of 2022</h3>
+          <h3 class="colored">Top 10 Laptops of 2022</h3>
           <p> Our best picks for various needs and budgets.</p>
         </div>
       </div>
@@ -96,16 +95,18 @@
         <img src="./assets/images/image-gaming-growth.jpg" alt="photo of a gaming pad">
         <div class="content-card">
           <h2>03</h2>
-          <h3>The Growth of Gaming</h3>
+          <h3 class="colored">The Growth of Gaming</h3>
           <p>How the pandemic has sparked fresh opportunitites.</p>
         </div>
       </div>
     </div>
     <div class="attribution">
       <p>Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.</p>
-      <p>Coded by <a href="#">Anne Rubio</a>.</p>
+      <p>Coded by <a href="#">Anne.R</a>.</p>
     </div>
   </div>
+<!-- connecting the js file with the html: -->
+  <script src="script.js"></script>
 </body>
 
 </html>
