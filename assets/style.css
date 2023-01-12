@@ -15,14 +15,17 @@
   height: 100vh;
   font-family:'Inter', sans-serif;
 }
+
 h1, h2, h3, p, a {
   font-family: 'Inter', sans-serif;
 }
+
 /* CONTAINER */
 .container {
   width: 1300px;
   margin: 40px auto;
 }
+
 /* BANNER IMG */
 .main-card-banner img {
   width: 100%;
@@ -35,71 +38,98 @@ nav {
   justify-content: space-between;
   align-items: center;
   margin-bottom: 30px;
+  margin-top: 40px;
 }
-ul li {
-  display: inline-block;
+
+/* hidding the toogle buttons on desktop mode: */
+.toggle {
+  display: none;
 }
-ul li a {
+
+/* aligning the li side by side and styling the menu & hover */
+.menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu li a {
   color: grey;
   padding-left: 2rem;
   transition: all .5s ease;
 }
 
-ul li a:hover,
-ul li.active a {
+.menu li a:hover,
+.menu li.active a {
   color: #f9a93a;
   font-weight: 600;
   transition: all .5s ease;
 }
 
-#icon-menu-hamburger svg {
-  color: black;
-  height: 18px;
-  cursor: pointer;
-}
-
-.close {
-  cursor: pointer;
-  margin-top: 0px;
-}
-
-
-/* hide the checkbox and the icon of the menu hamburger: */
-#checkbox,
-#icon-menu-hamburger {
-  display: none;
-}
-/* WORK IN PROGRESS: Turning the navbar responsive */
+/* MAKING THE NAVBAR RESPONSIVE */
 @media screen and (max-width: 760px) {
-  ul {
-    position: absolute;
-    left: 0;
-    top: 0;
+  .container {
     width: 100%;
+    margin: auto;
+  }
+
+  .header {
+    width: 100%;
+    margin: auto;
+  }
+
+  /* on mobile screen display the toggle buttons */
+  .toggle {
+    display: block;
+    cursor: pointer;
+    position: relative;
+    z-index: 20;
+  }
+
+  /* when arriving on the site on mobile display burger icon (= btn ouvrir)  */
+  .ouvrir {
+    display: block;
+  }
+
+  /* when arriving on the site on mobile hide the X icon (= btn fermer)  */
+  .fermer {
+    display: none;
+  }
+
+  /* on click on toggle, cf js event: new class open is added and btn ouvrir is closed  */
+  .open .ouvrir {
+    display: none;
+  }
+
+  /* on click on toggle, cf js event: new class open is removed and btn fermer is opened  */
+  .open .fermer {
+    display: block;
+  }
+
+  /* adding style to the menu li when mobile screens */
+  .menu {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 80%;
     height: 100vh;
     background-color: white;
-    display: none;
+    flex-direction: column;
+    justify-content: space-around;
     padding-top: 2rem;
-    text-align: left;
-    color: black;
     font-size: 1.25rem;
-
-  }
-  ul li {
-    display: block;
-    padding: 1rem;
+    /*menu is delayed to the left when burger is opened */
+    transform: translateX(-150%);
   }
 
-  ul li a {
-    display: block;
+  .menu li a {
+    color: black;
+    text-align: left;
   }
 
-  #icon-menu-hamburger {
-    display: block;
-  }
-
-  #checkbox:checked~ul {
-    display: block;
+  /*menu taking its initial position */
+  .open .menu {
+    transform: translateX(0);
   }
 }
 
@@ -137,12 +167,13 @@ ul li.active a {
   grid-column: 3/4;
 }
 
-/* Making the grid responsive for mobile */
+/* MAKING THE GRID RESPONSIVE FOR MOBILE */
 @media only screen and (max-width: 760px) {
   .container {
     width: 100%;
     margin: auto;
   }
+
   .main-card-banner img {
     background-image: url(./images/image-web-3-mobile.jpg);
     background-size: cover;
@@ -150,6 +181,7 @@ ul li.active a {
     display: block;
     width: 100%;
   }
+
   .grid-container {
     grid-template-columns: 1fr;
     grid-auto-rows: minmax(100px, auto);
@@ -283,11 +315,13 @@ ul li.active a {
   margin: 0px;
   padding-top: 5px;
 }
+
 .list-card-1 h3, .list-card-2 h3, .list-card-3 h3 {
   margin: 0px;
   padding-top: 10px;
   font-size: 1.3rem;
 }
+
 .list-card-1 p, .list-card-2 p, .list-card-3 p {
   color: gray;
   font-weight: 500;
